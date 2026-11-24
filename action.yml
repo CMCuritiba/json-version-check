@@ -55,3 +55,4 @@ runs:
 
         if ! previous_value=$(git show HEAD^:${FILE_PATH_INPUT} | jq -r ".$KEY_INPUT // \"none\"" 2>/dev/null); then
           echo "Error: Invalid JSON in previous version of $FILE_PATH_INPUT"
+        fi
